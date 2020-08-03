@@ -1,0 +1,10 @@
+apply plugin: 'scala'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.13.2'
+    implementation group: 'com.github.pureconfig', name: 'pureconfig_2.13', version: '0.13.0'
+}
