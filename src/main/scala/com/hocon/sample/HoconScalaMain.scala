@@ -1,5 +1,6 @@
 package com.hocon.sample
 
+import com.typesafe.config.ConfigFactory
 import pureconfig.{CamelCase, ConfigFieldMapping, ConfigSource, ConfigWriter}
 import pureconfig.generic.ProductHint
 import pureconfig.generic.auto._
@@ -13,7 +14,6 @@ case object HoconScalaMain {
       ConfigSource
         .resources("sample-config.conf")
         .load[SampleConfig]
-    //conf.getOrElse(null)
 
     print(ConfigWriter[SampleConfig].to(conf.getOrElse(null)).render())
   }
